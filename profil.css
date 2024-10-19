@@ -1,0 +1,84 @@
+.number-info {
+    font-size: 15x;
+    color: rgba(128, 128, 128, 0.404);
+}
+
+.number-info span {
+    font-size: 50px;
+    color: black;
+    font-weight: 100;
+}
+
+.user-main-info {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.mainContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.UserPostName {
+    font-size: 50px;
+}
+
+@media (max-width:835px) {
+    .UserPostName {
+        font-size: 30px;
+    }
+}
+
+@media (max-width:770px) {
+    .image {
+        margin-bottom: 20px;
+    }
+
+    .mainContent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width:550px) {
+    .UserPostName {
+        font-size: 25px;
+    }
+
+    .mainContent {
+        flex-direction: column;
+    }
+
+    .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .twoButtons {
+        display: flex;
+    }
+
+    .twoButtons button {
+        font-size: 10px;
+        padding: 4px;
+        margin-right: 2px;
+    }
+
+    #info_div {
+        display: flex;
+        align-items: center;
+    }
+
+    #info_div img {
+        width: 25px;
+        height: 25px;
+        margin-right: 2px;
+    }
+
+    #info_div b {
+        font-size: 12px;
+    }
+}

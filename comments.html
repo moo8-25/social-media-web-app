@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Project</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <!-- alert import -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="./node_modules/sweetalert2/dist/sweetalert2.min.css">
+    <!--// alert import //-->
+
+    <!-- import bootstrap -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- // import bootstrap // -->
+</head>
+
+
+<body>
+
+    <div class="container col-8 ">
+        <!-- nav bar -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="home.html">Tarmeez</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link"
+                                onclick="current_divClicked(encodeURIComponent((localStorage.getItem('user'))))">Profile</button>
+                        </li>
+                    </ul>
+                </div>
+                <div id="buttons">
+                    <button type="button" class="btn btn-outline-success" id="login-bt" data-bs-toggle="modal"
+                        data-bs-target="#login">Login</button>
+                    <button type="button" class="btn btn-outline-success" id="register-bt" data-bs-toggle="modal"
+                        data-bs-target="#register-bt">Register</button>
+                </div>
+                <div id="buttons2">
+                    <span id="CureentUserInfo"
+                        onclick="current_divClicked(encodeURIComponent((localStorage.getItem('user'))))"
+                        style="cursor: pointer;">
+                        <img id="loggedImg" src="" alt="" width="40px" height="40px" class="rounded-circle">
+                        <b id="loggedUser">mohamed77</b>
+                    </span>
+                    <button type="button" class="btn btn-outline-danger" onclick="logout()"
+                        id="register-bt">Logout</button>
+                </div>
+            </div>
+        </nav>
+        <!-- // nav bar // -->
+
+        <h3 id="userPost" style="margin-bottom: 60px;"></h3>
+
+        <!-- post Details -->
+
+        <!-- post content -->
+        <div id="post">
+        </div>
+        <!--// post Details //-->
+
+    </div>
+
+
+    <script src="comments.js"></script>
+    <script>
+        setupUI()
+    </script>
+</body>
+
+</html>
